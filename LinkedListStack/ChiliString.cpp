@@ -80,15 +80,17 @@ namespace chili
 		}
 	}
 
-	void int2str( int val,char* buf,int size )
-	{
-		char* const pStart = buf;
-		char* const pEnd = buf + size;
-		for( ; val > 0 && (buf + 1 < pEnd); val /= 10,buf++ )
-		{
-			*buf = '0' + val % 10;
+	void int2str(int number, char* pointer) {
+		int auxNumber = number;
+		int numberLength = 0;
+		while (auxNumber > 0) {
+			auxNumber /= 10;
+			numberLength++;
 		}
-		*buf = 0;
-		strrev( pStart );
+		char* endPointer = pointer + numberLength;
+		*endPointer = 0;
+		for (endPointer--; endPointer >= pointer; endPointer--, number /= 10) {
+			*endPointer = (number % 10) + 48;
+		}
 	}
 }

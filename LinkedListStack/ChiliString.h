@@ -8,5 +8,5 @@ namespace chili
 	void read( char* buf,int maxSize );
 	int str2int( const char* s );
 	void strrev( char* pl );
-	void int2str( int val,char* buf,int size );
+	void int2str( int val,char* buf);
 }

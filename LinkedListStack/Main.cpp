@@ -163,6 +163,11 @@ void test8()
 
 int main()
 {
+	Stack stack;
+	//stack.Push(1);
+	//stack.Push(2);
+	//stack.Push(3);
+	//stack.showStack();
 	_CrtSetReportMode( _CRT_WARN,_CRTDBG_MODE_FILE );
 	_CrtSetReportFile( _CRT_WARN,_CRTDBG_FILE_STDERR );
 	_CrtSetReportMode( _CRT_ERROR,_CRTDBG_MODE_FILE );
